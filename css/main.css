@@ -101,6 +101,10 @@ textarea {
     box-sizing: border-box;
 }
 
+html {
+    font-family: "Helvetica Neue", sans-serif;
+}
+
 html,
 body {
     height: 100%;
@@ -116,12 +120,18 @@ body {
     height: 44px;
     position: absolute;
     display: block;
-    font-size: 20px;
-    line-height: 44px;
     color: white;
     text-align: center;
     white-space: nowrap;
     background-color: tomato;
+}
+
+.top-bar__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 200;
+    line-height: 44px;
 }
 
 .top-bar > .btn {
@@ -149,7 +159,9 @@ main {
     margin-top: 1rem;
     padding: 0.5rem 1rem;
     display: inline-block;
+    text-align: center;
     text-decoration: none;
+    color: tomato;
     background-color: white;
 }
 
