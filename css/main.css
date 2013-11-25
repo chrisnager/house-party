@@ -167,17 +167,16 @@ body {
     height: 30px;
     margin: 7px;
     position: absolute;
+    top: 0;
     line-height: 30px;
 }
 
 .top-bar > .btn:first-child {
-    right: auto;
-    left: 0;
+    right: 0;
 }
 
 .top-bar > .btn:last-child {
-    right: 0;
-    left: auto;
+    left: 0;
 }
 
 main {
