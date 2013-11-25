@@ -110,9 +110,38 @@ body {
     height: 100%;
 }
 
+.btn {
+    height: 40px;
+    padding: 0 0.75rem;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    line-height: 40px;
+    color: tomato;
+    background-color: white;
+}
+
+.mt-n {
+    margin-top: 0;
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.block {
+    display: block;
+}
+
 .view {
     height: 100%;
+    position: relative;
+    overflow: hidden;
     background-color: skyblue;
+}
+
+.view--map > main {
+    padding: 0;
 }
 
 .top-bar {
@@ -135,42 +164,28 @@ body {
 }
 
 .top-bar > .btn {
+    height: 30px;
+    margin: 7px;
     position: absolute;
+    line-height: 30px;
 }
 
 .top-bar > .btn:first-child {
     right: auto;
-    left: 1rem;
+    left: 0;
 }
 
 .top-bar > .btn:last-child {
-    right: 1rem;
+    right: 0;
     left: auto;
 }
 
 main {
+    height: calc(100% - 44px);
     width: 100%;
     padding: 1rem;
     position: absolute;
     top: 44px;
-}
-
-.btn {
-    margin-top: 1rem;
-    padding: 0.5rem 1rem;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    color: tomato;
-    background-color: white;
-}
-
-.mt-n {
-    margin-top: 0;
-}
-
-.block {
-    display: block;
 }
 
 
