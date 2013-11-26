@@ -129,6 +129,14 @@ body {
     margin-top: 10px;
 }
 
+.mb-n {
+    margin-bottom: 0;
+}
+
+.ta-c {
+    text-align: center;
+}
+
 .block {
     display: block;
 }
