@@ -138,6 +138,14 @@ ul {
     margin-bottom: 0;
 }
 
+.pt-l {
+    padding-top: 2rem;
+}
+
+.pb-l {
+    padding-bottom: 2rem;
+}
+
 .pl-n {
     padding-left: 0;
 }
@@ -192,9 +200,11 @@ ul {
 
 .top-bar > .btn:first-of-type {
     right: 0;
+    left: auto;
 }
 
 .top-bar > .btn:last-of-type {
+    right: auto;
     left: 0;
 }
 
@@ -221,9 +231,8 @@ main {
 }
 
 .bummer {
-    font-weight: 100;
-    font-size: 72px;
-    font-family: -apple-system-font”, ".Helvetica Neue Interface UltraLight P2", "Helvetica Neue", sans-serif;
+    font: 100 72px/1 -apple-system-font”, ".Helvetica Neue Interface UltraLight P2", "Helvetica Neue", sans-serif;
+    letter-spacing: -0.0125em;
 }
 
 
