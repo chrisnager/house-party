@@ -1,4 +1,3 @@
 # House Party
 
-Best app ever
-
+Crafted by @chrisnager and @tdmackey.
