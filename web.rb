@@ -1,5 +1,6 @@
 require 'sinatra'
+require 'haml'
 
 get '/' do
-  "Let's Party!"
+	haml :main
 end
