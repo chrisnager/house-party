@@ -22,8 +22,22 @@ Push to Heroku to deploy.
 To push a branch other than master you can:
 `$ git push heroku yourbranch:master`
 
-## Notes
+## Git Notes
+
+First, create and swtich to a new branch for your feature:
+`$ git checkout -b feature_branch`
+
+To merge feature and ship:
+`$ git rebase master`
+`$ git checkout master`
+`$ git merge feature_branch`
+`$ git branch -d feature_branch`
+`$ git push [origin|github] master`
+
+## Software Notes
 
 This app uses [Koala](https://github.com/arsduo/koala) to talk to the Facebook API.
 
+
+## About 
 Crafted by @chrisnager and @tdmackey.
