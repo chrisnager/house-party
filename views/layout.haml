@@ -6,13 +6,16 @@
         %title House Party
         %meta{content: "", name: "description"}/
         %meta{content: "width=device-width, initial-scale=1", name: "viewport"}/
+        %meta{name: "apple-mobile-web-app-capable", content:"yes"}
+        %meta{name: "apple-mobile-web-app-status-bar-style", content: "black"}
+        %meta{name: "apple-mobile-web-app-title", content: "House Party"}
+        :javascript
+            (function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")
         %link{href: "css/normalize.css", rel: "stylesheet"}/
         %link{href: "css/main.css", rel: "stylesheet"}/
         %script{src: "js/vendor/modernizr-2.6.2.min.js"}
     %body
-
         = yield
-
         %script{src: "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
         :javascript
             window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
