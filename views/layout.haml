@@ -1,0 +1,28 @@
+!!!
+%html.no-js
+    %head
+        %meta{charset: "utf-8"}/
+        %meta{content: "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+        %title House Party
+        %meta{content: "", name: "description"}/
+        %meta{content: "width=device-width, initial-scale=1", name: "viewport"}/
+        %link{href: "css/normalize.css", rel: "stylesheet"}/
+        %link{href: "css/main.css", rel: "stylesheet"}/
+        %script{src: "js/vendor/modernizr-2.6.2.min.js"}
+    %body
+
+        = yield
+
+        %script{src: "//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"}
+        :javascript
+            window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')
+        %script{src: "js/plugins.js"}
+        %script{src: "js/main.js"}
+        / TODO: Google Analytics: Change UA-XXXXX-X.
+        :javascript
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
