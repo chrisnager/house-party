@@ -35,6 +35,7 @@ To merge feature and ship:
 ```bash
 $ git rebase master
 $ git checkout master
+$ git pull
 $ git merge feature_branch
 $ git branch -d feature_branch
 $ git push [origin|github] master

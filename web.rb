@@ -34,7 +34,9 @@ end
 
 get '/party-details' do
 	if session['access_token']
-		haml :party_details
+		graph = Koala::Facebook::API.new(session['access_token'])
+		@friends = graph.get_connections("me", "friends")
+		haml :party_details, :locals => {:friends => @friends}
 	else
 		'<a href="/login">Login</a>'
 	end
@@ -58,4 +60,10 @@ get '/callback' do
 	#get the access token from facebook
 	session['access_token'] = session['oauth'].get_access_token(params[:code])
 	redirect '/'
+end
+
+
+def self.friends_list(access_token)
+	graph = Koala::Facebook::API.new(access_token)
+	@friends = graph.get_connections("me", "friends")
 end

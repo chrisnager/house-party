@@ -4,6 +4,16 @@
         %a.btn.btn--header{href: "host-a-party"} Create
         %a.btn.btn--header{href: "/"} Back
     %main
+        %h3
+            Invite Friends To Party
+            %ul
+                - locals[:friends].each do |friend|
+                    %li
+                        -# For whatever reason the profile images doesn't load yet although the src url seems to be fine
+                        %a{:href => "#", "onclick" => "window.open('http://www.facebook.com/#{friend['id']}')"}
+                            %img{:src => "http://graph.facebook.com/#{friend['id']}/picture?type=square", :alt => "#{friend['name']}"}
+                                =friend['name']
+            
         %ul.mt-n.mb-n.pl-n
             %li
                 %select 10:30pm
