@@ -249,8 +249,8 @@ main {
 
 }
 
-.friend-list__item {
-
+.friend-list__item.is-selected {
+    background-color: gold;
 }
 
 .friend-list__item > a {
@@ -259,6 +259,10 @@ main {
     display: block;
     text-decoration: none;
     color: #222;
+}
+
+.friend-list__item:first-child > a {
+    border-top: 1px solid;
 }
 
 .fb-avatar {
