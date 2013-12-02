@@ -42,6 +42,14 @@ get '/invite-friends' do
 	end
 end
 
+get '/party-details' do
+	if session['access_token']
+		haml :party_details
+	else
+		'<a href="/login">Login</a>'
+	end
+end
+
 get '/login' do
 	# generate a new oauth object
  	session['oauth'] = Koala::Facebook::OAuth.new(ENV["FACEBOOK_APP_ID"], ENV["FACEBOOK_APP_SECRET"], "#{request.base_url}/callback")

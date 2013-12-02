@@ -241,7 +241,7 @@ main {
    Friend list
    ========================================================================== */
 
-.party-details main {
+.invite-friends > main {
     padding: 0;
 }
 

@@ -1,8 +1,8 @@
-.view.party-details
+.view.invite-friends
     %header.top-bar
         %h1.top-bar__title Invite Friends
-        %a.btn.btn--header{href: "host-a-party"} Create
-        %a.btn.btn--header{href: "/"} Back
+        %a.btn.btn--header{href: "party-details"} Next
+        %a.btn.btn--header{href: "host-a-party"} Back
     %main
         %ul{class: "friend-list  mt-n  mb-n  pl-n"}
             - locals[:friends].each do |friend|
