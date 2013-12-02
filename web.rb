@@ -32,23 +32,23 @@ get '/host-a-party' do
 	end
 end
 
-get '/party-details' do
+get '/invite-friends' do
 	if session['access_token']
 		graph = Koala::Facebook::API.new(session['access_token'])
 		@friends = graph.get_connections("me", "friends")
-		haml :party_details, :locals => {:friends => @friends}
+		haml :invite_friends, :locals => {:friends => @friends}
 	else
 		'<a href="/login">Login</a>'
 	end
 end
-  
+
 get '/login' do
 	# generate a new oauth object
  	session['oauth'] = Koala::Facebook::OAuth.new(ENV["FACEBOOK_APP_ID"], ENV["FACEBOOK_APP_SECRET"], "#{request.base_url}/callback")
 	# redirect to facebook
  	redirect session['oauth'].url_for_oauth_code()
  end
-  
+
 get '/logout' do
 	session['oauth'] = nil
 	session['access_token'] = nil
