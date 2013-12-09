@@ -109,6 +109,36 @@ ul {
     background-color: white;
 }
 
+.btn--sign-up {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 60px;
+    font-size: 2rem;
+    line-height: 60px;
+    color: white;
+    background-color: gold;
+}
+
+.btn--sign-up:active {
+    background-color: orange;
+}
+
+.btn--log-in {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    font-size: 2rem;
+    line-height: 60px;
+    color: white;
+    background-color: limegreen;
+}
+
+.btn--log-in:active {
+    background-color: green;
+}
+
 .mt-n {
     margin-top: 0;
 }

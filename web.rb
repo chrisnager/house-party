@@ -12,15 +12,16 @@ get '/' do
 	if session['access_token']
 		haml :main
 	else
-		'<a href="/login">Login</a>'
+		haml :log_in
 	end
 end
 
 get '/find-a-party' do
 	if session['access_token']
+		# @parties = [{ "host": "Alex", "time": "12:15", "location": "Beverly Hills" }, { "host": "David", "time": "17:55", "location": "Memphis" }, { "host": "Potato", "time": "1:44", "location": "Mobile Bay" }, { "host": "Yolo", "time": "1:23", "location": "Mt. Everest" }]
 		haml :find_a_party
 	else
-		'<a href="/login">Login</a>'
+		haml :log_in
 	end
 end
 
@@ -28,7 +29,7 @@ get '/host-a-party' do
 	if session['access_token']
 		haml :host_a_party
 	else
-		'<a href="/login">Login</a>'
+		haml :log_in
 	end
 end
 
@@ -38,7 +39,7 @@ get '/invite-friends' do
 		@friends = graph.get_connections("me", "friends")
 		haml :invite_friends, :locals => {:friends => @friends}
 	else
-		'<a href="/login">Login</a>'
+		haml :log_in
 	end
 end
 
@@ -46,11 +47,11 @@ get '/party-details' do
 	if session['access_token']
 		haml :party_details
 	else
-		'<a href="/login">Login</a>'
+		haml :log_in
 	end
 end
 
-get '/login' do
+get '/log-in' do
 	# generate a new oauth object
  	session['oauth'] = Koala::Facebook::OAuth.new(ENV["FACEBOOK_APP_ID"], ENV["FACEBOOK_APP_SECRET"], "#{request.base_url}/callback")
 	# redirect to facebook
