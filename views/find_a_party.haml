@@ -4,6 +4,14 @@
 		%a.btn.btn--header{href: "/"} Back
 	%main.ta-c
 		.pt-l.pb-l
-			%h1.bummer.mt-n.mb-n Bummer
-			%p.mt-n There are no parties going on
-			%a.btn.block{href: "host-a-party"} You should host a party
+            / David, work your magic. Flex those ruby skillz.
+            - if there are no parties
+    			%h1.bummer.mt-n.mb-n Bummer
+    			%p.mt-n There are no parties going on
+    			%a.btn.block{href: "host-a-party"} You should host a party
+            - if there are > 0 parties
+                %ul.parties
+                - parties.each do |party|
+                    %li.parties__party
+                        %h1 #{party['host']} invited you to a party
+                        %p #{party[location]} at #{party[time]}
