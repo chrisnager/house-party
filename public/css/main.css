@@ -139,6 +139,14 @@ ul {
     background-color: green;
 }
 
+.btn--name-this-location {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    display: block;
+}
+
 .mt-n {
     margin-top: 0;
 }

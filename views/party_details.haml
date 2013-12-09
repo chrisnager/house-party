@@ -6,5 +6,32 @@
     %main
         %ul.mt-n.mb-n.pl-n
             %li
-                %select 10:30pm
-                %select 3am
+                %h2 Time
+                %select
+                    / Default is current time rounded up to the nearest 30 minute increment
+                    %option 10:30pm
+                %span -
+                %select
+                    / Default is +3 hours
+                    %option 1:30am
+            %li
+                %h2 Location
+                %p 37.776142,-122.417221
+                %label Name this location (Optional)
+                / If user names location, it saves this location for future use and replace the "[latitude], [longitude]" with the location name
+                %br
+                %input{placeholder: "Cody's apt"}
+
+            %li
+                %h2 Details (Optional)
+                %textarea{placeholder: "Buzz 3R. $5 cover for the keg. Bring friends"}
+            / Privacy is not really necessary because only people that the host chooses are invited
+            / %li
+            /     %h2 Privacy
+            /     %select
+            /         %option Invite Only
+            /         %option Friends of Guests
+            %li
+                %h2 Guest List
+                %p
+                    %a{href: "invite-friends"} David Mackey +12 others
